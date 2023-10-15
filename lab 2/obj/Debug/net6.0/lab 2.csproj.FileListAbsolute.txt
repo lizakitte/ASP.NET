@@ -1,0 +1,62 @@
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\appsettings.Development.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\appsettings.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.staticwebassets.runtime.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.exe
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.deps.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.runtimeconfig.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.dll
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\bin\Debug\net6.0\lab 2.pdb
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.csproj.AssemblyReference.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.AssemblyInfoInputs.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.AssemblyInfo.cs
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.csproj.CoreCompileInputs.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.RazorAssemblyInfo.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.RazorAssemblyInfo.cs
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.lab 2.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.build.lab 2.props
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.lab 2.props
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.lab 2.props
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.build.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.development.json
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\bundle\lab 2.styles.css
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\projectbundle\lab 2.bundle.scp.css
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.dll
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\refint\lab 2.dll
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.pdb
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\lab 2.genruntimeconfig.cache
+D:\Users\yelyzaveta.prokopenk\source\repos\Laboratorium ASP.NET\lab 2\obj\Debug\net6.0\ref\lab 2.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\appsettings.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.staticwebassets.runtime.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.exe
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.deps.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.runtimeconfig.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\bin\Debug\net6.0\lab 2.pdb
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.csproj.AssemblyReference.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.AssemblyInfoInputs.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.AssemblyInfo.cs
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.csproj.CoreCompileInputs.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.RazorAssemblyInfo.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.RazorAssemblyInfo.cs
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.lab 2.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.build.lab 2.props
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.lab 2.props
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.lab 2.props
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\bundle\lab 2.styles.css
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\scopedcss\projectbundle\lab 2.bundle.scp.css
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\refint\lab 2.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.pdb
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\lab 2.genruntimeconfig.cache
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 2\obj\Debug\net6.0\ref\lab 2.dll
