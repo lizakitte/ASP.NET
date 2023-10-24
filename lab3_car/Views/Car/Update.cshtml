@@ -1,0 +1,48 @@
+﻿@using lab3_car.Models;
+@model Car
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Edytuj samochod</h1>
+<form asp-controller="Car" asp-action="Update" method="post">
+    <div class="mb-3">
+        <label asp-for="Model">Model</label>
+        <input class="form-control" asp-for="Model" />
+        <span class="text-danger" asp-validation-for="Model"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Manufacturer">Producent</label>
+        <input class="form-control" asp-for="Manufacturer" />
+        <span class="text-danger" asp-validation-for="Manufacturer"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Capaciy">Pojemnosc silnika</label>
+        <input class="form-control" asp-for="Capaciy" />
+        <span class="text-danger" asp-validation-for="Capaciy"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Power">Moc</label>
+        <input class="form-control" asp-for="Power" />
+        <span asp-validation-for="Power"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EngineType">Typ silnika</label>
+        <input class="form-control" asp-for="EngineType" />
+        <span asp-validation-for="EngineType"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegistratioinNumber">Nr rejestracyjny</label>
+        <input class="form-control" asp-for="RegistratioinNumber" />
+        <span asp-validation-for="RegistratioinNumber"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Owner">Wlasciciel</label>
+        <input class="form-control" asp-for="Owner" />
+        <span asp-validation-for="Owner"></span>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Zapisz</button>
+    </div>
+</form>
