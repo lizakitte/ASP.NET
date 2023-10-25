@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = lab_1
 build_property.RootNamespace = lab_1
-build_property.ProjectDir = C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 1\
+build_property.ProjectDir = D:\Users\yelyzaveta.prokopenk\Desktop\labs\ASP.NET\lab 1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab 1
+build_property.MSBuildProjectDirectory = D:\Users\yelyzaveta.prokopenk\Desktop\labs\ASP.NET\lab 1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/about.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/about.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/Calc.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/Calc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxjLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/Error.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/Index.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/Kalkulator.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/Kalkulator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLYWxrdWxhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Home/Privacy.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Shared/Error.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/_ViewImports.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/_ViewStart.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Liza/Desktop/wsei/Programowanie/ASP.NET/lab 1/Views/Shared/_Layout.cshtml]
+[D:/Users/yelyzaveta.prokopenk/Desktop/labs/ASP.NET/lab 1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-znx8m06ozj
