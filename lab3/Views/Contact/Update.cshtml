@@ -1,4 +1,4 @@
-﻿@using lab3_App.Models;
+﻿@using lab3_App.Models.ContactModels;
 @model Contact
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,22 +9,22 @@
 <form asp-controller="Contact" asp-action="Update" method="post">
     <input asp-for="Id"/>
     <div class="mb-3">
-        <label asp-for="Name">Imie</label>
+        <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
         <span class="text-danger" asp-validation-for="Name"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Email">Email</label>
+        <label asp-for="Email"></label>
         <input class="form-control" asp-for="Email" />
         <span class="text-danger" asp-validation-for="Email"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Phone">Telefon</label>
+        <label asp-for="Phone"></label>
         <input class="form-control" asp-for="Phone" />
         <span class="text-danger" asp-validation-for="Phone"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Birth">Data urodzenia</label>
+        <label asp-for="Birth"></label>
         <input class="form-control" asp-for="Birth" />
         <span asp-validation-for="Birth"></span>
     </div>

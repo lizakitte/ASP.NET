@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "D:\\Users\\yelyzaveta.prokopenk\\.nuget\\packages\\": {}
+    "C:\\Users\\Liza\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\yelyzaveta.prokopenk\\Desktop\\labs\\ASP.NET\\lab 2\\lab 2.csproj",
+      "projectUniqueName": "C:\\Users\\Liza\\Desktop\\wsei\\Programowanie\\ASP.NET\\lab 2\\lab 2.csproj",
       "projectName": "lab 2",
-      "projectPath": "D:\\Users\\yelyzaveta.prokopenk\\Desktop\\labs\\ASP.NET\\lab 2\\lab 2.csproj",
-      "packagesPath": "D:\\Users\\yelyzaveta.prokopenk\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\yelyzaveta.prokopenk\\Desktop\\labs\\ASP.NET\\lab 2\\obj\\",
+      "projectPath": "C:\\Users\\Liza\\Desktop\\wsei\\Programowanie\\ASP.NET\\lab 2\\lab 2.csproj",
+      "packagesPath": "C:\\Users\\Liza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Liza\\Desktop\\wsei\\Programowanie\\ASP.NET\\lab 2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Users\\yelyzaveta.prokopenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Liza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

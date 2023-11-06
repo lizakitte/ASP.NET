@@ -1,0 +1,51 @@
+﻿@using lab3_App.Models.CarModels
+@model List<Car>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Lista samochodow</h1>
+<a class="btn btn-primary" asp-controller="Car" asp-action="Create">Utworz samochod</a>
+@if (Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(i => Model[0].Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(i => Model[0].Manufacturer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(i => Model[0].RegistratioinNumber)
+                </th>
+                <th>
+                    Akcja
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>
+                        @item.Model
+                    </td>
+                    <td>
+                        @item.Manufacturer
+                    </td>
+                    <td>
+                        @item.RegistratioinNumber
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary" asp-controller="Car" asp-action="Update" asp-route-id="@item.Id">Edytuj</a>
+                        <a class="btn btn-outline-info" asp-controller="Car" asp-action="Details" asp-route-id="@item.Id">Szczegoly</a>
+                        <a class="btn btn-outline-danger" asp-controller="Car" asp-action="Delete" asp-route-id="@item.Id">Usun</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,10 +1,12 @@
-using lab3_App.Models;
+using lab3_App.Models.ContactModels;
+using lab3_App.Models.CarModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IContactService, MemoryContactService>();
+builder.Services.AddSingleton<ICarService, MemoryCarService>();
 builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
 var app = builder.Build();
 

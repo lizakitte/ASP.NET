@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using lab3_App.Models;
+using lab3_App.Models.ContactModels;
 
 namespace lab3_App.Controllers
 {

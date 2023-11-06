@@ -1,4 +1,5 @@
-﻿@using lab3_App.Models
+﻿@using lab3_App.Models.ContactModels;
+
 @model Contact
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -6,14 +7,14 @@
 @{
 }
 <h1>Szczegoly</h1>
-<p>Imie</p>
+<p>@Html.DisplayNameFor(i => Model.Name)</p>
 <h3>@Model.Name</h3>
-<p>Email</p>
+<p>@Html.DisplayNameFor(i => Model.Email)</p>
 <h3>@Model.Email</h3>
-<p>Telefon</p>
+<p>@Html.DisplayNameFor(i => Model.Phone)</p>
 <h3>@Model.Phone</h3>
-<p>Data urodzenia</p>
+<p>@Html.DisplayNameFor(i => Model.Birth)</p>
 <h3>@Model.Birth</h3>
-<p>Created</p>
+<p>@Html.DisplayNameFor(i => Model.Created)</p>
 <h3>@Model.Created</h3>
 <a class="btn btn-secondary" asp-action="Index">Powrot</a>

@@ -1,4 +1,4 @@
-﻿using lab3.Models;
+﻿using lab3_App.Models.ContactModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
