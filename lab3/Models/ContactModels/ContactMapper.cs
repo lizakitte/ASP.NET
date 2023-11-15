@@ -13,6 +13,7 @@ namespace lab3_App.Models.ContactModels
                 Email = entity.Email,
                 Phone = entity.Phone,
                 Birth = entity.Birth,
+                OrganizationId = entity.OrganizationId,
             };
         }
 
@@ -25,6 +26,7 @@ namespace lab3_App.Models.ContactModels
                 Email = model.Email,
                 Phone = model.Phone,
                 Birth = model.Birth,
+                OrganizationId = model.OrganizationId,
             };
         }
     }

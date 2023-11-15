@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Entities;
 
 namespace lab3_App.Models.ContactModels
 {
@@ -34,6 +35,11 @@ namespace lab3_App.Models.ContactModels
                 .Contacts
                 .Select(e => ContactMapper.FromEntity(e))
                 .ToList();
+        }
+
+        public List<OrganizationEntity> FindAllOrganizations()
+        {
+            return _context.Organisations.ToList();
         }
 
         public Contact? FindById(int id)

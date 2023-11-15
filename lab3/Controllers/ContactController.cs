@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using lab3_App.Models.ContactModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Text.RegularExpressions;
 
 namespace lab3_App.Controllers
 {
@@ -21,7 +23,35 @@ namespace lab3_App.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            Contact model = new Contact();
+            model.OrganizationList = CreateOrganizationItemList();
+            return View(model);
+        }
+
+        private List<SelectListItem> CreateOrganizationItemList()
+        {
+            var gr = new SelectListGroup()
+            {
+                Name = "Organizacje",
+            };
+            return _contactService.FindAllOrganizations()
+                            .Select(e => new SelectListItem()
+                            {
+                                Text = e.Name,
+                                Value = e.Id.ToString(),
+                                Group = gr,
+                            })
+                            .Append(new SelectListItem()
+                            {
+                                Text = "Brak organizacji",
+                                Value = "",
+                                Selected = true,
+                                Group = new SelectListGroup()
+                                {
+                                    Name = "Brak",
+                                }
+                            })
+                            .ToList();
         }
 
         [HttpPost]
@@ -32,7 +62,8 @@ namespace lab3_App.Controllers
                 _contactService.Add(model);
                 return RedirectToAction("Index");
             }
-            return View();
+            model.OrganizationList = CreateOrganizationItemList();
+            return View(model);
         }
 
         [HttpGet]

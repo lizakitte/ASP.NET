@@ -36,10 +36,15 @@ namespace Data.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("name");
 
+                    b.Property<int?>("OrganizationId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Phone")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ContactId");
+
+                    b.HasIndex("OrganizationId");
 
                     b.ToTable("contacts");
 
@@ -47,27 +52,123 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 1,
-                            Birth = new DateTime(2023, 11, 8, 11, 43, 56, 389, DateTimeKind.Local).AddTicks(4409),
+                            Birth = new DateTime(2023, 11, 15, 11, 27, 8, 906, DateTimeKind.Local).AddTicks(3674),
                             Email = "adam@wsei.edu.pl",
                             Name = "Adam",
+                            OrganizationId = 101,
                             Phone = "123456789"
                         },
                         new
                         {
                             ContactId = 2,
-                            Birth = new DateTime(2023, 11, 8, 11, 43, 56, 389, DateTimeKind.Local).AddTicks(4456),
+                            Birth = new DateTime(2023, 11, 15, 11, 27, 8, 906, DateTimeKind.Local).AddTicks(3718),
                             Email = "ewa@wsei.edu.pl",
                             Name = "Ewa",
+                            OrganizationId = 102,
                             Phone = "123456777"
                         },
                         new
                         {
                             ContactId = 3,
-                            Birth = new DateTime(2023, 11, 8, 11, 43, 56, 389, DateTimeKind.Local).AddTicks(4460),
+                            Birth = new DateTime(2023, 11, 15, 11, 27, 8, 906, DateTimeKind.Local).AddTicks(3722),
                             Email = "karol@wsei.edu.pl",
                             Name = "Karol",
                             Phone = "123456788"
                         });
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Organisations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 101,
+                            Description = "Uczelnia wyższa",
+                            Name = "WSEI"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Description = "Przedsiębiorstwo IT",
+                            Name = "Comarch"
+                        });
+                });
+
+            modelBuilder.Entity("Data.Entities.ContactEntity", b =>
+                {
+                    b.HasOne("Data.Entities.OrganizationEntity", "Organization")
+                        .WithMany("Contacts")
+                        .HasForeignKey("OrganizationId");
+
+                    b.Navigation("Organization");
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
+                    b.OwnsOne("Data.Models.Address", "Address", b1 =>
+                        {
+                            b1.Property<int>("OrganizationEntityId")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("PostalCode")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.HasKey("OrganizationEntityId");
+
+                            b1.ToTable("Organisations");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrganizationEntityId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    OrganizationEntityId = 101,
+                                    City = "Kraków",
+                                    PostalCode = "31-150",
+                                    Street = "św. Filipa 17"
+                                },
+                                new
+                                {
+                                    OrganizationEntityId = 102,
+                                    City = "Kraków",
+                                    PostalCode = "36-160",
+                                    Street = "Rozwoju 1/4"
+                                });
+                        });
+
+                    b.Navigation("Address")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
+                    b.Navigation("Contacts");
                 });
 #pragma warning restore 612, 618
         }

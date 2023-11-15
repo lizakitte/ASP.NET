@@ -1,4 +1,6 @@
-﻿namespace lab3_App.Models.ContactModels
+﻿using Data.Entities;
+
+namespace lab3_App.Models.ContactModels
 {
     public class MemoryContactService : IContactService
     {
@@ -43,6 +45,11 @@
             {
                 _contacts[contact.Id] = contact;
             }
+        }
+
+        public List<OrganizationEntity> FindAllOrganizations()
+        {
+            throw new NotImplementedException();
         }
     }
 }
