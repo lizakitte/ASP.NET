@@ -2,9 +2,11 @@
 using lab3_App.Models.ContactModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace lab3_App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ContactController : Controller
     {
 
@@ -15,6 +17,7 @@ namespace lab3_App.Controllers
             _contactService = contactService;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_contactService.FindAll());
