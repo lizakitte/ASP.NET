@@ -12,5 +12,6 @@ namespace lab3_App.Models.ContactModels
         void DeleteById(int id);
         void Update(Contact contact);
         List<OrganizationEntity> FindAllOrganizations();
+        PagingList<Contact> FindPage(int page, int size);
     }
 }

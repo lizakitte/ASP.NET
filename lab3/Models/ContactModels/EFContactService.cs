@@ -48,6 +48,18 @@ namespace lab3_App.Models.ContactModels
             return find is null ? null : ContactMapper.FromEntity(find);
         }
 
+        public PagingList<Contact> FindPage(int page, int size)
+        {
+            return PagingList<Contact>.Create(
+                (p, s) => _context.Contacts
+                .OrderBy(c => c.Name)
+                .Skip((p - 1) * s)
+                .Select(ContactMapper.FromEntity)
+                .ToList(),
+                page, size, _context.Contacts.Count()
+                );
+        }
+
         public void Update(Contact contact)
         {
             var entity = ContactMapper.ToEntity(contact);
