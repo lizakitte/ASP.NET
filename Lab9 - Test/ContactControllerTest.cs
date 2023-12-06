@@ -1,7 +1,7 @@
-using System.Web.Mvc;
 using lab3_App;
 using lab3_App.Controllers;
 using lab3_App.Models.ContactModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Lab9___Test
 {
@@ -12,9 +12,9 @@ namespace Lab9___Test
 
         public ContactControllerTest()
         {
-            _service = new MemoryContactService(new DateTimeProvider());
-            _service.Add(new ContactControllerTest() { Name = "Test1" });
-            _service.Add(new ContactControllerTest() { Name = "Test2" });
+            _service = new MemoryContactService(new CurrentDateTimeProvider());
+            _service.Add(new Contact() { Name = "Test1" });
+            _service.Add(new Contact() { Name = "Test2" });
             _controller = new ContactController(_service);
         }
 
@@ -48,7 +48,7 @@ namespace Lab9___Test
         public void DetailsTestForNonExistingContacts()
         {
             var result = _controller.Details(5);
-            Assert.IsType<HttpNotFoundResult>(result);
+            Assert.IsType<NotFoundResult>(result);
         }
 
         [Fact]
