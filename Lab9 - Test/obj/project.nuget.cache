@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "O8qxsT4xF6a+hEyP1IHrOc1JFil6rzIqBA0W5ThsfM6pAc9N+MbZI7mK37yZIyDPzkCg+xEAG6ZwtCnMlbM/Rg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Liza\\Desktop\\wsei\\Programowanie\\ASP.NET\\Lab9 - Test\\Lab9 - Test.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project lab3_App is not compatible with net6.0 (.NETCoreApp,Version=v6.0). Project lab3_App supports: net7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "lab3_App",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

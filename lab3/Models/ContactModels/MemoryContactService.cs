@@ -16,10 +16,11 @@ namespace lab3_App.Models.ContactModels
             _timeProvider = timeProvider;
         }
 
+        private int _id = 1;
         public int Add(Contact model)
         {
             model.Created = _timeProvider.Now();
-            model.Id = id++;
+            model.Id = _id++;
             _contacts[model.Id] = model;
             return model.Id;
         }
@@ -36,7 +37,7 @@ namespace lab3_App.Models.ContactModels
 
         public Contact? FindById(int id)
         {
-            return _contacts[id];
+            return _contacts.ContainsKey(id) ? _contacts[id] : null;
         }
 
         public void Update(Contact contact)

@@ -111,7 +111,16 @@ namespace lab3_App.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            return View(_contactService.FindById(id));
+            var model = _contactService.FindById(id);
+            if(model is null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return View(model);
+            }
+            
         }
         [HttpPost]
         public IActionResult Details(Contact model)

@@ -1,4 +1,5 @@
-﻿using lab3_App.Models.ContactModels;
+﻿using lab3_App.Models;
+using lab3_App.Models.ContactModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,6 +16,15 @@ namespace lab3.Controllers
 
         public IActionResult Index()
         {
+            DateTime? lastVisitDate = HttpContext.Items[LastVisitCookie.CookieName] as DateTime?;
+            if(lastVisitDate is null)
+            {
+                ViewBag.LastVisitDate = HttpContext.Items[LastVisitCookie.CookieName];
+            }
+            else
+            {
+                ViewBag.LastVisitDate = lastVisitDate?.Date;
+            }
             return View();
         }
 

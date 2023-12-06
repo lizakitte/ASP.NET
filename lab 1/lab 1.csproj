@@ -7,4 +7,8 @@
     <RootNamespace>lab_1</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
 </Project>

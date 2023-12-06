@@ -3,6 +3,7 @@ using lab3_App.Models.CarModels;
 using Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using lab3_App.Models;
 
 internal class Program
 {
@@ -36,6 +37,11 @@ internal class Program
         app.UseStaticFiles();
 
         app.UseRouting();
+        app.UseMiddleware<LastVisitCookie>();
+        //app.Use(async (context, next) =>
+        //{
+        //    return;
+        //});
 
         app.UseAuthentication();
         app.UseSession();
