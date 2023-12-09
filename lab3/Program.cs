@@ -16,7 +16,7 @@ internal class Program
         builder.Services.AddSession();
         builder.Services.AddControllersWithViews();
         builder.Services.AddTransient<IContactService, EFContactService>();
-        builder.Services.AddSingleton<ICarService, MemoryCarService>();
+        builder.Services.AddTransient<ICarService, EFCarService>();
         builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
         builder.Services.AddDbContext<AppDbContext>();
 

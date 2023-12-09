@@ -17,6 +17,65 @@ namespace Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
 
+            modelBuilder.Entity("Data.Entities.CarEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal?>("Capacity")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("EngineType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Manufacturer")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Owner")
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal?>("Power")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RegistratioinNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("car");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Capacity = 4m,
+                            EngineType = 3,
+                            Manufacturer = "Ford",
+                            Model = "Fusion",
+                            Owner = "Jan Nowak",
+                            Power = 340m,
+                            RegistratioinNumber = 1362
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Capacity = 3.5m,
+                            EngineType = 0,
+                            Manufacturer = "Honda",
+                            Model = "CR-V",
+                            Owner = "Kacper Malinowski",
+                            Power = 190m,
+                            RegistratioinNumber = 98
+                        });
+                });
+
             modelBuilder.Entity("Data.Entities.ContactEntity", b =>
                 {
                     b.Property<int>("ContactId")
@@ -52,7 +111,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 1,
-                            Birth = new DateTime(2023, 11, 22, 11, 42, 2, 211, DateTimeKind.Local).AddTicks(1062),
+                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4591),
                             Email = "adam@wsei.edu.pl",
                             Name = "Adam",
                             OrganizationId = 101,
@@ -61,7 +120,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 2,
-                            Birth = new DateTime(2023, 11, 22, 11, 42, 2, 211, DateTimeKind.Local).AddTicks(1125),
+                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4641),
                             Email = "ewa@wsei.edu.pl",
                             Name = "Ewa",
                             OrganizationId = 102,
@@ -70,7 +129,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 3,
-                            Birth = new DateTime(2023, 11, 22, 11, 42, 2, 211, DateTimeKind.Local).AddTicks(1131),
+                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4645),
                             Email = "karol@wsei.edu.pl",
                             Name = "Karol",
                             Phone = "123456788"
@@ -138,8 +197,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c876692c-bcc5-4f3b-859f-944ee6b98803",
-                            ConcurrencyStamp = "c876692c-bcc5-4f3b-859f-944ee6b98803",
+                            Id = "efc341ce-392f-471f-a151-03f752d19046",
+                            ConcurrencyStamp = "efc341ce-392f-471f-a151-03f752d19046",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -234,17 +293,17 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4dba1b95-7cd3-405f-9b8d-3491fde49d96",
+                            Id = "3ab1647a-330f-46e4-aba5-c28f30d62595",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "82025c9b-4d90-4c6c-9973-4e5b18880902",
+                            ConcurrencyStamp = "aba9fb94-1520-404a-83a0-a1c679105fb3",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBf5Ynuv+/WQKKm0Yo2W+PmDa79AvCOjJqp+b1U6LdBQBfiSUsbDbPB5xJSwbk6Miw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPj+GyYLELG8zZUWmf7W1PdcfItZMCJDbt4hJkmi4vE+/japO146WpN2J0ifcQJUnA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3818edfd-57a7-4726-b0f2-da4bf1b5b3cd",
+                            SecurityStamp = "b6380a52-42c9-429c-8203-b4143821739f",
                             TwoFactorEnabled = false,
                             UserName = "adam"
                         });
@@ -312,8 +371,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "4dba1b95-7cd3-405f-9b8d-3491fde49d96",
-                            RoleId = "c876692c-bcc5-4f3b-859f-944ee6b98803"
+                            UserId = "3ab1647a-330f-46e4-aba5-c28f30d62595",
+                            RoleId = "efc341ce-392f-471f-a151-03f752d19046"
                         });
                 });
 

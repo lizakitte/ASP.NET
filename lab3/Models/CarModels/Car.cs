@@ -33,7 +33,7 @@ namespace lab3_App.Models.CarModels
         public string Manufacturer { get; set; }
 
         [Display(Name = "Pojemnosc silnika")]
-        public decimal? Capaciy { get; set; }
+        public decimal? Capacity { get; set; }
 
         [Display(Name = "Moc")]
         public decimal? Power { get; set; }

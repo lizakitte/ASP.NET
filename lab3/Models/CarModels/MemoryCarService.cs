@@ -7,7 +7,7 @@ namespace lab3_App.Models.CarModels
         private Dictionary<int, Car> _cars = new Dictionary<int, Car>()
         {
             {1, new Car(){Id = 1, Model = "A6 3.0 tdi quattro", Manufacturer = "Audi",
-                Capaciy = 3000, Power = 225, EngineType = Engine.Diesel,
+                Capacity = 3000, Power = 225, EngineType = Engine.Diesel,
                 RegistratioinNumber = 7777, Owner = "Ja"}}
         };
         private int id = 2;

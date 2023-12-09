@@ -15,6 +15,7 @@ namespace Data
         private string Path { get; set; }
         public DbSet<ContactEntity> Contacts { get; set; }
         public DbSet<OrganizationEntity> Organisations { get; set; }
+        public DbSet<CarEntity> Cars { get; set; }
         public AppDbContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
@@ -137,6 +138,31 @@ namespace Data
                         PostalCode = "36-160"
                     }
                 );
+
+            modelBuilder.Entity<CarEntity>().HasData(
+               new CarEntity()
+               {
+                   Id = 1,
+                   Model = "Fusion",
+                   Manufacturer = "Ford",
+                   Capacity = 4,
+                   Power = 340,
+                   EngineType = Engine.Hybrid,
+                   RegistratioinNumber = 1362,
+                   Owner = "Jan Nowak"
+               },
+               new CarEntity()
+               {
+                   Id = 2,
+                   Model = "CR-V",
+                   Manufacturer = "Honda",
+                   Capacity = 3.5m,
+                   Power = 190,
+                   EngineType = Engine.Gasoline,
+                   RegistratioinNumber = 0098,
+                   Owner = "Kacper Malinowski"
+               }
+               );
         }
     }
 }
