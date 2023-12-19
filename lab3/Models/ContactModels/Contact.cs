@@ -43,6 +43,8 @@ namespace lab3_App.Models.ContactModels
 
         [HiddenInput]
         public DateTime Created { get; set; }
+
+        [HiddenInput]
         public int? OrganizationId { get; set; }
 
         [ValidateNever]

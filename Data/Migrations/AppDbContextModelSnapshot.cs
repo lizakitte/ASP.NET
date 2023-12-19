@@ -29,9 +29,8 @@ namespace Data.Migrations
                     b.Property<int>("EngineType")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Manufacturer")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ManufacturerId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -49,6 +48,8 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ManufacturerId");
+
                     b.ToTable("car");
 
                     b.HasData(
@@ -57,7 +58,7 @@ namespace Data.Migrations
                             Id = 1,
                             Capacity = 4m,
                             EngineType = 3,
-                            Manufacturer = "Ford",
+                            ManufacturerId = 1001,
                             Model = "Fusion",
                             Owner = "Jan Nowak",
                             Power = 340m,
@@ -68,7 +69,7 @@ namespace Data.Migrations
                             Id = 2,
                             Capacity = 3.5m,
                             EngineType = 0,
-                            Manufacturer = "Honda",
+                            ManufacturerId = 1002,
                             Model = "CR-V",
                             Owner = "Kacper Malinowski",
                             Power = 190m,
@@ -111,7 +112,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 1,
-                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4591),
+                            Birth = new DateTime(2023, 12, 19, 14, 53, 6, 597, DateTimeKind.Local).AddTicks(9893),
                             Email = "adam@wsei.edu.pl",
                             Name = "Adam",
                             OrganizationId = 101,
@@ -120,7 +121,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 2,
-                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4641),
+                            Birth = new DateTime(2023, 12, 19, 14, 53, 6, 597, DateTimeKind.Local).AddTicks(9957),
                             Email = "ewa@wsei.edu.pl",
                             Name = "Ewa",
                             OrganizationId = 102,
@@ -129,16 +130,44 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 3,
-                            Birth = new DateTime(2023, 12, 9, 20, 16, 34, 171, DateTimeKind.Local).AddTicks(4645),
+                            Birth = new DateTime(2023, 12, 19, 14, 53, 6, 597, DateTimeKind.Local).AddTicks(9964),
                             Email = "karol@wsei.edu.pl",
                             Name = "Karol",
                             Phone = "123456788"
                         });
                 });
 
+            modelBuilder.Entity("Data.Entities.ManufacturerEntity", b =>
+                {
+                    b.Property<int>("ManufacturerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ManufacturerId");
+
+                    b.ToTable("Manufacturers");
+
+                    b.HasData(
+                        new
+                        {
+                            ManufacturerId = 1001,
+                            Name = "Ford"
+                        },
+                        new
+                        {
+                            ManufacturerId = 1002,
+                            Name = "Honda"
+                        });
+                });
+
             modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("OrganizationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -150,20 +179,20 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("OrganizationId");
 
                     b.ToTable("Organisations");
 
                     b.HasData(
                         new
                         {
-                            Id = 101,
+                            OrganizationId = 101,
                             Description = "Uczelnia wyższa",
                             Name = "WSEI"
                         },
                         new
                         {
-                            Id = 102,
+                            OrganizationId = 102,
                             Description = "Przedsiębiorstwo IT",
                             Name = "Comarch"
                         });
@@ -197,8 +226,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "efc341ce-392f-471f-a151-03f752d19046",
-                            ConcurrencyStamp = "efc341ce-392f-471f-a151-03f752d19046",
+                            Id = "57f5cfc2-48ea-4b52-859b-fbc2b6054319",
+                            ConcurrencyStamp = "57f5cfc2-48ea-4b52-859b-fbc2b6054319",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -293,17 +322,17 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3ab1647a-330f-46e4-aba5-c28f30d62595",
+                            Id = "f6afdda6-db67-4787-a43f-2d7a7811c063",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "aba9fb94-1520-404a-83a0-a1c679105fb3",
+                            ConcurrencyStamp = "83c16a29-b603-4c5d-8744-f804d861d6f9",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPj+GyYLELG8zZUWmf7W1PdcfItZMCJDbt4hJkmi4vE+/japO146WpN2J0ifcQJUnA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIDFYykPD/Ta/tqy3OCvEJcvELd71ifal7Wv2P9KMv60iciGdBhAcl+NJZzAh4aKtg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b6380a52-42c9-429c-8203-b4143821739f",
+                            SecurityStamp = "57dbd725-1581-49ee-a5e5-bc491ad82f55",
                             TwoFactorEnabled = false,
                             UserName = "adam"
                         });
@@ -371,8 +400,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "3ab1647a-330f-46e4-aba5-c28f30d62595",
-                            RoleId = "efc341ce-392f-471f-a151-03f752d19046"
+                            UserId = "f6afdda6-db67-4787-a43f-2d7a7811c063",
+                            RoleId = "57f5cfc2-48ea-4b52-859b-fbc2b6054319"
                         });
                 });
 
@@ -395,6 +424,17 @@ namespace Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Data.Entities.CarEntity", b =>
+                {
+                    b.HasOne("Data.Entities.ManufacturerEntity", "Manufacturer")
+                        .WithMany("Cars")
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manufacturer");
+                });
+
             modelBuilder.Entity("Data.Entities.ContactEntity", b =>
                 {
                     b.HasOne("Data.Entities.OrganizationEntity", "Organization")
@@ -404,14 +444,18 @@ namespace Data.Migrations
                     b.Navigation("Organization");
                 });
 
-            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+            modelBuilder.Entity("Data.Entities.ManufacturerEntity", b =>
                 {
                     b.OwnsOne("Data.Models.Address", "Address", b1 =>
                         {
-                            b1.Property<int>("OrganizationEntityId")
+                            b1.Property<int>("ManufacturerEntityManufacturerId")
                                 .HasColumnType("INTEGER");
 
                             b1.Property<string>("City")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("Country")
                                 .IsRequired()
                                 .HasColumnType("TEXT");
 
@@ -423,25 +467,80 @@ namespace Data.Migrations
                                 .IsRequired()
                                 .HasColumnType("TEXT");
 
-                            b1.HasKey("OrganizationEntityId");
+                            b1.HasKey("ManufacturerEntityManufacturerId");
 
-                            b1.ToTable("Organisations");
+                            b1.ToTable("Manufacturers");
 
                             b1.WithOwner()
-                                .HasForeignKey("OrganizationEntityId");
+                                .HasForeignKey("ManufacturerEntityManufacturerId");
 
                             b1.HasData(
                                 new
                                 {
-                                    OrganizationEntityId = 101,
+                                    ManufacturerEntityManufacturerId = 1001,
+                                    City = "Dearborn",
+                                    Country = "Unated States",
+                                    PostalCode = "MI 48126",
+                                    Street = "Ford Motor Company"
+                                },
+                                new
+                                {
+                                    ManufacturerEntityManufacturerId = 1002,
+                                    City = "Tokyo",
+                                    Country = "Japan",
+                                    PostalCode = "107-8556",
+                                    Street = "2-1-1 Minami-Aoyama"
+                                });
+                        });
+
+                    b.Navigation("Address")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
+                    b.OwnsOne("Data.Models.Address", "Address", b1 =>
+                        {
+                            b1.Property<int>("OrganizationEntityOrganizationId")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("PostalCode")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.HasKey("OrganizationEntityOrganizationId");
+
+                            b1.ToTable("Organisations");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrganizationEntityOrganizationId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    OrganizationEntityOrganizationId = 101,
                                     City = "Kraków",
+                                    Country = "Polska",
                                     PostalCode = "31-150",
                                     Street = "św. Filipa 17"
                                 },
                                 new
                                 {
-                                    OrganizationEntityId = 102,
+                                    OrganizationEntityOrganizationId = 102,
                                     City = "Kraków",
+                                    Country = "Polska",
                                     PostalCode = "36-160",
                                     Street = "Rozwoju 1/4"
                                 });
@@ -500,6 +599,11 @@ namespace Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Data.Entities.ManufacturerEntity", b =>
+                {
+                    b.Navigation("Cars");
                 });
 
             modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>

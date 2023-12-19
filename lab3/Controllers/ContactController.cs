@@ -50,7 +50,7 @@ namespace lab3_App.Controllers
                             .Select(e => new SelectListItem()
                             {
                                 Text = e.Name,
-                                Value = e.Id.ToString(),
+                                Value = e.OrganizationId.ToString(),
                                 Group = gr,
                             })
                             .Append(new SelectListItem()

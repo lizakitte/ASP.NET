@@ -6,7 +6,7 @@ namespace lab3_App.Models.CarModels
     {
         private Dictionary<int, Car> _cars = new Dictionary<int, Car>()
         {
-            {1, new Car(){Id = 1, Model = "A6 3.0 tdi quattro", Manufacturer = "Audi",
+            {1, new Car(){Id = 1, Model = "A6 3.0 tdi quattro", ManufacturerId = 1003,
                 Capacity = 3000, Power = 225, EngineType = Engine.Diesel,
                 RegistratioinNumber = 7777, Owner = "Ja"}}
         };
@@ -27,6 +27,11 @@ namespace lab3_App.Models.CarModels
         public List<Car> FindAll()
         {
             return _cars.Values.ToList();
+        }
+
+        public List<Data.Entities.ManufacturerEntity> FindAllManufacturers()
+        {
+            throw new NotImplementedException();
         }
 
         public Car? FindById(int id)

@@ -33,6 +33,11 @@ namespace lab3_App.Models.CarModels
             return _context.Cars.Select(e => CarMapper.FromEntity(e)).ToList();
         }
 
+        public List<ManufacturerEntity> FindAllManufacturers()
+        {
+            return _context.Manufacturers.ToList();
+        }
+
         public Car? FindById(int id)
         {
             return CarMapper.FromEntity(_context.Cars.Find(id));

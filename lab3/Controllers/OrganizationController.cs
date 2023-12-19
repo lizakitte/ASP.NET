@@ -36,7 +36,7 @@ namespace lab3_App.Controllers
             }
 
             var organizationEntity = await _context.Organisations
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.OrganizationId == id);
             if (organizationEntity == null)
             {
                 return NotFound();
@@ -90,7 +90,7 @@ namespace lab3_App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] OrganizationEntity organizationEntity)
         {
-            if (id != organizationEntity.Id)
+            if (id != organizationEntity.OrganizationId)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace lab3_App.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!OrganizationEntityExists(organizationEntity.Id))
+                    if (!OrganizationEntityExists(organizationEntity.OrganizationId))
                     {
                         return NotFound();
                     }
@@ -127,7 +127,7 @@ namespace lab3_App.Controllers
             }
 
             var organizationEntity = await _context.Organisations
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.OrganizationId == id);
             if (organizationEntity == null)
             {
                 return NotFound();
@@ -157,7 +157,7 @@ namespace lab3_App.Controllers
 
         private bool OrganizationEntityExists(int id)
         {
-          return (_context.Organisations?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Organisations?.Any(e => e.OrganizationId == id)).GetValueOrDefault();
         }
     }
 }

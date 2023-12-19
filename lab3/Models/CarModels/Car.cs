@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace lab3_App.Models.CarModels
@@ -30,7 +32,10 @@ namespace lab3_App.Models.CarModels
 
         [Display(Name = "Producent")]
         [Required(ErrorMessage = "Musisz podac producenta")]
-        public string Manufacturer { get; set; }
+        [HiddenInput]
+        public int ManufacturerId { get; set; }
+        [ValidateNever]
+        public List<SelectListItem> Manufacturers { get; set; }
 
         [Display(Name = "Pojemnosc silnika")]
         public decimal? Capacity { get; set; }

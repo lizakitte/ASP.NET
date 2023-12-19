@@ -11,7 +11,7 @@ namespace lab3_App.Models.CarModels
             {
                 Id = entity.Id,
                 Model = entity.Model,
-                Manufacturer = entity.Manufacturer,
+                ManufacturerId = entity.ManufacturerId,
                 Capacity = entity.Capacity,
                 Power = entity.Power,
                 EngineType = (Engine)entity.EngineType,
@@ -26,7 +26,7 @@ namespace lab3_App.Models.CarModels
             {
                 Id = model.Id,
                 Model = model.Model,
-                Manufacturer = model.Manufacturer,
+                ManufacturerId = model.ManufacturerId,
                 Capacity = model.Capacity,
                 Power = model.Power,
                 EngineType = (Data.Entities.Engine)model.EngineType,

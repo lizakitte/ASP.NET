@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using lab3_App.Models.CarModels;
+using lab3_App.Models.ContactModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace lab3_App.Controllers
 {
@@ -17,10 +19,38 @@ namespace lab3_App.Controllers
             return View(_carService.FindAll());
         }
 
+        private List<SelectListItem> CreateManufacturerItemList()
+        {
+            var gr = new SelectListGroup()
+            {
+                Name = "Producenty",
+            };
+            return _carService.FindAllManufacturers()
+                            .Select(e => new SelectListItem()
+                            {
+                                Text = e.Name,
+                                Value = e.ManufacturerId.ToString(),
+                                Group = gr,
+                            })
+                            .Append(new SelectListItem()
+                            {
+                                Text = "Nie wiadomy producent",
+                                Value = "",
+                                Selected = true,
+                                Group = new SelectListGroup()
+                                {
+                                    Name = "Nie wiadomo",
+                                }
+                            })
+                            .ToList();
+        }
+
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            Car _model = new Car();
+            _model.Manufacturers = CreateManufacturerItemList();
+            return View(_model);
         }
 
         [HttpPost]
@@ -31,6 +61,7 @@ namespace lab3_App.Controllers
                 _carService.Add(_model);
                 return RedirectToAction("Index");
             }
+            _model.Manufacturers = CreateManufacturerItemList();
             return View();
         }
 

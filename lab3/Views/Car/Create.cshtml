@@ -13,9 +13,8 @@
         <span class="text-danger" asp-validation-for="Model"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Manufacturer"></label>
-        <input class="form-control" asp-for="Manufacturer" />
-        <span class="text-danger" asp-validation-for="Manufacturer"></span>
+        <label asp-for="ManufacturerId"></label>
+        <select class="form-control" asp-for="ManufacturerId" asp-items="@Model.Manufacturers"></select>
     </div>
     <div class="mb-3">
         <label asp-for="Capacity"></label>

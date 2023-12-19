@@ -21,12 +21,12 @@ namespace lab3_App.Controllers
                 q == null 
                 ?
                 _context.Organisations
-                .Select(o => new { name = o.Name, id = o.Id })
+                .Select(o => new { name = o.Name, id = o.OrganizationId })
                 .ToList()
                 :
                 _context.Organisations
                 .Where(o => o.Name.ToUpper().StartsWith(q.ToUpper()))
-                .Select(o => new { name = o.Name, id = o.Id })
+                .Select(o => new { name = o.Name, id = o.OrganizationId })
                 .ToList()
                 );
         }

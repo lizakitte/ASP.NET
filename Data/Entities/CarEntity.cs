@@ -28,8 +28,8 @@ namespace Data.Entities
         public int Id { get; set; }
         [Required]
         public string Model { get; set; }
-        [Required]
-        public string Manufacturer { get; set; }
+        public int ManufacturerId { get; set; }
+        public ManufacturerEntity? Manufacturer { get; set; }
         public decimal? Capacity { get; set; }
         public decimal? Power { get; set; }
         public Engine EngineType { get; set; }

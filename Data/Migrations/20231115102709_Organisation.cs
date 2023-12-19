@@ -29,7 +29,8 @@ namespace Data.Migrations
                     Description = table.Column<string>(type: "TEXT", nullable: false),
                     Address_City = table.Column<string>(type: "TEXT", nullable: false),
                     Address_Street = table.Column<string>(type: "TEXT", nullable: false),
-                    Address_PostalCode = table.Column<string>(type: "TEXT", nullable: false)
+                    Address_PostalCode = table.Column<string>(type: "TEXT", nullable: false),
+                    Address_Country = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,11 +39,11 @@ namespace Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Organisations",
-                columns: new[] { "Id", "Description", "Name", "Address_City", "Address_PostalCode", "Address_Street" },
+                columns: new[] { "Id", "Description", "Name", "Address_City", "Address_PostalCode", "Address_Street", "Address_Country" },
                 values: new object[,]
                 {
-                    { 101, "Uczelnia wyższa", "WSEI", "Kraków", "31-150", "św. Filipa 17" },
-                    { 102, "Przedsiębiorstwo IT", "Comarch", "Kraków", "36-160", "Rozwoju 1/4" }
+                    { 101, "Uczelnia wyższa", "WSEI", "Kraków", "31-150", "św. Filipa 17", "Polska" },
+                    { 102, "Przedsiębiorstwo IT", "Comarch", "Kraków", "36-160", "Rozwoju 1/4", "Polska" }
                 });
 
             migrationBuilder.UpdateData(

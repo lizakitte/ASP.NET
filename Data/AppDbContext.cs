@@ -16,6 +16,7 @@ namespace Data
         public DbSet<ContactEntity> Contacts { get; set; }
         public DbSet<OrganizationEntity> Organisations { get; set; }
         public DbSet<CarEntity> Cars { get; set; }
+        public DbSet<ManufacturerEntity> Manufacturers { get; set; }
         public AppDbContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
@@ -79,13 +80,13 @@ namespace Data
                 .HasData(
                 new OrganizationEntity()
                 {
-                    Id = 101,
+                    OrganizationId = 101,
                     Name = "WSEI",
                     Description = "Uczelnia wyższa"
                 },
                 new OrganizationEntity()
                 {
-                    Id = 102,
+                    OrganizationId = 102,
                     Name = "Comarch",
                     Description = "Przedsiębiorstwo IT"
                 }
@@ -125,17 +126,60 @@ namespace Data
                 .HasData(
                     new
                     {
-                        OrganizationEntityId = 101,
+                        OrganizationEntityOrganizationId = 101,
                         City = "Kraków",
                         Street = "św. Filipa 17",
-                        PostalCode = "31-150"
+                        PostalCode = "31-150",
+                        Country = "Polska"
                     },
                     new
                     {
-                        OrganizationEntityId = 102,
+                        OrganizationEntityOrganizationId = 102,
                         City = "Kraków",
                         Street = "Rozwoju 1/4",
-                        PostalCode = "36-160"
+                        PostalCode = "36-160",
+                        Country = "Polska"
+                    }
+                );
+
+
+            modelBuilder.Entity<CarEntity>()
+                .HasOne(c => c.Manufacturer)
+                .WithMany(m => m.Cars)
+                .HasForeignKey(c => c.ManufacturerId);
+
+            modelBuilder.Entity<ManufacturerEntity>()
+                .HasData(
+                new ManufacturerEntity()
+                {
+                    ManufacturerId = 1001,
+                    Name = "Ford"
+                },
+                new ManufacturerEntity()
+                {
+                    ManufacturerId = 1002,
+                    Name = "Honda"
+                }
+                );
+
+            modelBuilder.Entity<ManufacturerEntity>()
+                .OwnsOne(o => o.Address)
+                .HasData(
+                    new
+                    {
+                        ManufacturerEntityManufacturerId = 1001,
+                        City = "Dearborn",
+                        Street = "Ford Motor Company",
+                        PostalCode = "MI 48126",
+                        Country = "Unated States"
+                    },
+                    new
+                    {
+                        ManufacturerEntityManufacturerId = 1002,
+                        City = "Tokyo",
+                        Street = "2-1-1 Minami-Aoyama",
+                        PostalCode = "107-8556",
+                        Country = "Japan"
                     }
                 );
 
@@ -144,7 +188,7 @@ namespace Data
                {
                    Id = 1,
                    Model = "Fusion",
-                   Manufacturer = "Ford",
+                   ManufacturerId = 1001,
                    Capacity = 4,
                    Power = 340,
                    EngineType = Engine.Hybrid,
@@ -155,7 +199,7 @@ namespace Data
                {
                    Id = 2,
                    Model = "CR-V",
-                   Manufacturer = "Honda",
+                   ManufacturerId = 1002,
                    Capacity = 3.5m,
                    Power = 190,
                    EngineType = Engine.Gasoline,
