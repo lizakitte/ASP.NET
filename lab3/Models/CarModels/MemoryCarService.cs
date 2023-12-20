@@ -8,7 +8,7 @@ namespace lab3_App.Models.CarModels
         {
             {1, new Car(){Id = 1, Model = "A6 3.0 tdi quattro", ManufacturerId = 1003,
                 Capacity = 3000, Power = 225, EngineType = Engine.Diesel,
-                RegistratioinNumber = 7777, Owner = "Ja"}}
+                RegistratioinNumber = 7777, ContactId = 1}}
         };
         private int id = 2;
 
@@ -30,6 +30,11 @@ namespace lab3_App.Models.CarModels
         }
 
         public List<Data.Entities.ManufacturerEntity> FindAllManufacturers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Data.Entities.ContactEntity> FindAllOwnerContacts()
         {
             throw new NotImplementedException();
         }

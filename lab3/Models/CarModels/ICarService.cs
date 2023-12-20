@@ -10,5 +10,6 @@ namespace lab3_App.Models.CarModels
         void DeleteById(int id);
         void Update(Car car);
         List<ManufacturerEntity> FindAllManufacturers();
+        List<ContactEntity> FindAllOwnerContacts();
     }
 }

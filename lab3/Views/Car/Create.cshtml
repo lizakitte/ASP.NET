@@ -37,9 +37,8 @@
         <span asp-validation-for="RegistratioinNumber"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Owner"></label>
-        <input class="form-control" asp-for="Owner" />
-        <span asp-validation-for="Owner"></span>
+        <label asp-for="ContactId"></label>
+        <select class="form-control" asp-for="ContactId" asp-items="@Model.Contacts"></select>
     </div>
     <div class="mb-3">
         <button class="btn btn-primary" type="submit">Utworz</button>

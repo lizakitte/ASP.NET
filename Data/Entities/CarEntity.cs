@@ -35,7 +35,8 @@ namespace Data.Entities
         public Engine EngineType { get; set; }
         [Required]
         public int RegistratioinNumber { get; set; }
-        [MaxLength(50)]
-        public string? Owner { get; set; }
+        public int? ContactId { get; set; }
+        public ContactEntity? OwnerContact { get; set; }
+
     }
 }

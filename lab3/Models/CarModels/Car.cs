@@ -51,7 +51,10 @@ namespace lab3_App.Models.CarModels
         public int RegistratioinNumber { get; set; }
 
         [Display(Name = "Wlasciciel")]
-        [StringLength(maximumLength: 50, ErrorMessage = "Zbyt dlugie imie, podaj mniejsze")]
-        public string? Owner { get; set; }
+        [HiddenInput]
+        public int? ContactId { get; set; }
+
+        [ValidateNever]
+        public List<SelectListItem> Contacts { get; set; }
     }
 }

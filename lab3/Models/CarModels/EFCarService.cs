@@ -38,6 +38,11 @@ namespace lab3_App.Models.CarModels
             return _context.Manufacturers.ToList();
         }
 
+        public List<ContactEntity> FindAllOwnerContacts()
+        {
+            return _context.Contacts.ToList();
+        }
+
         public Car? FindById(int id)
         {
             return CarMapper.FromEntity(_context.Cars.Find(id));

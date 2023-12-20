@@ -148,6 +148,11 @@ namespace Data
                 .WithMany(m => m.Cars)
                 .HasForeignKey(c => c.ManufacturerId);
 
+            modelBuilder.Entity<CarEntity>()
+                .HasOne(c => c.OwnerContact)
+                .WithMany(o => o.Cars)
+                .HasForeignKey(c => c.ContactId);
+
             modelBuilder.Entity<ManufacturerEntity>()
                 .HasData(
                 new ManufacturerEntity()
@@ -193,7 +198,7 @@ namespace Data
                    Power = 340,
                    EngineType = Engine.Hybrid,
                    RegistratioinNumber = 1362,
-                   Owner = "Jan Nowak"
+                   ContactId = 3
                },
                new CarEntity()
                {
@@ -204,7 +209,7 @@ namespace Data
                    Power = 190,
                    EngineType = Engine.Gasoline,
                    RegistratioinNumber = 0098,
-                   Owner = "Kacper Malinowski"
+                   ContactId = 2
                }
                );
         }

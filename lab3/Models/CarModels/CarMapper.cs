@@ -16,7 +16,7 @@ namespace lab3_App.Models.CarModels
                 Power = entity.Power,
                 EngineType = (Engine)entity.EngineType,
                 RegistratioinNumber = entity.RegistratioinNumber,
-                Owner = entity.Owner,
+                ContactId = entity.ContactId,
             };
         }
 
@@ -31,7 +31,7 @@ namespace lab3_App.Models.CarModels
                 Power = model.Power,
                 EngineType = (Data.Entities.Engine)model.EngineType,
                 RegistratioinNumber = model.RegistratioinNumber,
-                Owner = model.Owner,
+                ContactId = model.ContactId,
             };
         }
     }
