@@ -113,7 +113,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 1,
-                            Birth = new DateTime(2023, 12, 20, 18, 1, 4, 167, DateTimeKind.Local).AddTicks(8325),
+                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5862),
                             Email = "adam@wsei.edu.pl",
                             Name = "Adam",
                             OrganizationId = 101,
@@ -122,7 +122,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 2,
-                            Birth = new DateTime(2023, 12, 20, 18, 1, 4, 167, DateTimeKind.Local).AddTicks(8375),
+                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5934),
                             Email = "ewa@wsei.edu.pl",
                             Name = "Ewa",
                             OrganizationId = 102,
@@ -131,7 +131,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 3,
-                            Birth = new DateTime(2023, 12, 20, 18, 1, 4, 167, DateTimeKind.Local).AddTicks(8380),
+                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5941),
                             Email = "karol@wsei.edu.pl",
                             Name = "Karol",
                             Phone = "123456788"
@@ -227,8 +227,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4652c287-3ce6-4cd3-b652-aa8011c0814d",
-                            ConcurrencyStamp = "4652c287-3ce6-4cd3-b652-aa8011c0814d",
+                            Id = "f24af637-5246-4a71-a73d-166a115922bc",
+                            ConcurrencyStamp = "f24af637-5246-4a71-a73d-166a115922bc",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -323,17 +323,17 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3cbffc7c-40ba-4b07-8cde-d49a89e0c072",
+                            Id = "4a0d31e7-76ca-4541-95d6-7f87047dfc0c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f5f2fb87-ecef-48d5-8466-e1a6ac25257e",
+                            ConcurrencyStamp = "453bea70-06ba-46b7-b436-93d93575bd38",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEISBxWXcj5JVwqB5KsTMCYgmTjh4wkcRDqupoXxIZ6v/p/JbetSU9z47ZMNb3O6F1Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECzJeQxu3BgHhLkgaS5Anl/2l7jQ+LXX5u0DlKQiTFr0rvU1PV3kt0AHcTEv0dlKbg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0a21bd71-0d67-4df0-991f-66a444f55352",
+                            SecurityStamp = "9ca5382c-faf0-4c78-8f42-798c00574a5e",
                             TwoFactorEnabled = false,
                             UserName = "adam"
                         });
@@ -401,8 +401,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "3cbffc7c-40ba-4b07-8cde-d49a89e0c072",
-                            RoleId = "4652c287-3ce6-4cd3-b652-aa8011c0814d"
+                            UserId = "4a0d31e7-76ca-4541-95d6-7f87047dfc0c",
+                            RoleId = "f24af637-5246-4a71-a73d-166a115922bc"
                         });
                 });
 
@@ -500,8 +500,7 @@ namespace Data.Migrations
                                 });
                         });
 
-                    b.Navigation("Address")
-                        .IsRequired();
+                    b.Navigation("Address");
                 });
 
             modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>

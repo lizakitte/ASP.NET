@@ -13,10 +13,9 @@ namespace Data.Entities
         [Key]
         public int ManufacturerId { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50)] 
         public string Name { get; set; }
-        [Required]
-        public Address Address { get; set; }
+        public Address? Address { get; set; }
         public ISet<CarEntity> Cars { get; set; }
     }
 }

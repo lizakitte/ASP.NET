@@ -1,4 +1,5 @@
 ﻿@using lab3_App.Models.CarModels
+@using lab3_App.Models
 @model Car
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,6 +16,7 @@
     <div class="mb-3">
         <label asp-for="ManufacturerId"></label>
         <select class="form-control" asp-for="ManufacturerId" asp-items="@Model.Manufacturers"></select>
+        <button class="btn btn-primary" asp-controller="Manufacturer" asp-action="Create">Dodaj producenta</button>
     </div>
     <div class="mb-3">
         <label asp-for="Capacity"></label>
@@ -39,6 +41,7 @@
     <div class="mb-3">
         <label asp-for="ContactId"></label>
         <select class="form-control" asp-for="ContactId" asp-items="@Model.Contacts"></select>
+        <button class="btn btn-primary" asp-controller="Contact" asp-action="Create">Dodaj kontakt</button>
     </div>
     <div class="mb-3">
         <button class="btn btn-primary" type="submit">Utworz</button>
