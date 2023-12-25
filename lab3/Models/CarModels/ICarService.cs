@@ -1,4 +1,5 @@
 ﻿using Data.Entities;
+using lab3_App.Models.ContactModels;
 
 namespace lab3_App.Models.CarModels
 {
@@ -11,5 +12,6 @@ namespace lab3_App.Models.CarModels
         void Update(Car car);
         List<ManufacturerEntity> FindAllManufacturers();
         List<ContactEntity> FindAllOwnerContacts();
+        public PagingList<Car> FindPage(int page, int size);
     }
 }

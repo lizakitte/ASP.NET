@@ -19,6 +19,11 @@ namespace lab3_App.Controllers
             return View(_carService.FindAll());
         }
 
+        public IActionResult PagedIndex([FromQuery] int page = 1, [FromQuery] int size = 1)
+        {
+            return View(_carService.FindPage(page, size));
+        }
+
         private List<SelectListItem> CreateManufacturerItemList()
         {
             var gr = new SelectListGroup()

@@ -44,6 +44,11 @@ namespace lab3_App.Models.CarModels
             return _cars[id];
         }
 
+        public PagingList<Car> FindPage(int page, int size)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Car car)
         {
             if (_cars.ContainsKey(car.Id))

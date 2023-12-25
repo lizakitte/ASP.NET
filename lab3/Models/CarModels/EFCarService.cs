@@ -48,6 +48,21 @@ namespace lab3_App.Models.CarModels
             return CarMapper.FromEntity(_context.Cars.Find(id));
         }
 
+        public PagingList<Car> FindPage(int page, int size)
+        {
+            return PagingList<Car>.Create(
+            (p, s) => _context.Cars
+            .OrderBy(c => c.Model)
+            .Skip((p - 1) * s)
+            .Take(s)
+            .Select(CarMapper.FromEntity)
+            .ToList(),
+            page,
+            size,
+            _context.Cars.Count()
+            );
+        }
+
         public void Update(Car car)
         {
             _context.Cars.Update(CarMapper.ToEntity(car));
