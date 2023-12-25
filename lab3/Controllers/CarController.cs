@@ -129,9 +129,26 @@ namespace lab3_App.Controllers
             return View(_carService.FindById(id));
         }
         [HttpPost]
-        public IActionResult Details(Car _model)
+        public IActionResult Details()
         {
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult CreateApi()
+        {
+            return View(new Car());
+        }
+
+        [HttpPost]
+        public IActionResult CreateApi(Car _model)
+        {
+            if (ModelState.IsValid)
+            {
+                _carService.Add(_model);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }
