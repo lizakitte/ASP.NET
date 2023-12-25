@@ -56,10 +56,8 @@ namespace Lab9___Test
         {
             Contact model = new Contact { Name = "Test", Email = "test@wsei.edu.pl", Phone = "5689252" };
             var prevCount = _service.FindAll().Count;
-            var result = _controller.Create(model);
+            _controller.Create(model);
             Assert.Equal(prevCount + 1, _service.FindAll().Count);
         }
-
-        //add for invalid
     }
 }

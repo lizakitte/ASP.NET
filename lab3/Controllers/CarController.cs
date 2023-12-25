@@ -109,6 +109,10 @@ namespace lab3_App.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (_carService.FindById(_model.Id) == null)
+                {
+                    return NotFound();
+                }
                 _carService.Update(_model);
                 return RedirectToAction("Index");
             }
@@ -118,12 +122,21 @@ namespace lab3_App.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            return View(_carService.FindById(id));
+            var _model = _carService.FindById(id);
+            if (_model is null)
+            {
+                return NotFound();
+            }
+            return View(_model);
         }
 
         [HttpPost]
         public IActionResult Delete(Car _model)
         {
+            if (_carService.FindById(_model.Id) == null)
+            {
+                return NotFound();
+            }
             _carService.DeleteById(_model.Id);
             return RedirectToAction("Index");
         }
@@ -131,7 +144,15 @@ namespace lab3_App.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            return View(_carService.FindById(id));
+            var _model = _carService.FindById(id);
+            if (_model is null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return View(_model);
+            }
         }
         [HttpPost]
         public IActionResult Details()

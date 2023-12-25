@@ -14,6 +14,10 @@ namespace lab3_App.Models.CarModels
 
         public int Add(Car car)
         {
+            if(_cars.ContainsKey(car.Id))
+            {
+                throw new Exception("Id already exists");
+            }
             car.Id = id++;
             _cars[car.Id] = car;
             return car.Id;
@@ -41,7 +45,7 @@ namespace lab3_App.Models.CarModels
 
         public Car? FindById(int id)
         {
-            return _cars[id];
+            return _cars.ContainsKey(id) ? _cars[id] : null;
         }
 
         public PagingList<Car> FindPage(int page, int size)

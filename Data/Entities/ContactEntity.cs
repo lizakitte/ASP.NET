@@ -19,6 +19,7 @@ namespace Data.Entities
         [MaxLength(50)]
         public string Name { get; set; }
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
         public string? Phone { get; set; }
         public DateTime? Birth { get; set; }
