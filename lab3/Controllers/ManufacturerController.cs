@@ -1,9 +1,11 @@
 ﻿using lab3_App.Models.CarModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace lab3_App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ManufacturerController : Controller
     {
         private readonly IManufacturerService _manufacturerService;
@@ -13,6 +15,7 @@ namespace lab3_App.Controllers
             _manufacturerService = manufacturerService;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_manufacturerService.FindAll());
@@ -80,6 +83,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Details(int id)
         {
             var _model = _manufacturerService.FindById(id);
@@ -93,6 +97,7 @@ namespace lab3_App.Controllers
             }
         }
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult Details()
         {
             return RedirectToAction("Index");

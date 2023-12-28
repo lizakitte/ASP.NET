@@ -32,7 +32,7 @@ namespace Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            var user = new IdentityUser()
+            var userAdmin = new IdentityUser()
             {
                 Id = Guid.NewGuid().ToString(),
                 UserName = "adam",
@@ -42,13 +42,26 @@ namespace Data
                 EmailConfirmed = true
             };
 
+            var viewer = new IdentityUser()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "user",
+                NormalizedUserName = "USER",
+                Email = "user@wsei.edu.pl",
+                NormalizedEmail = "USER@WSEI.EDU.PL",
+                EmailConfirmed = true
+            };
+
             PasswordHasher<IdentityUser> passwordHasher = new PasswordHasher<IdentityUser>();
-            user.PasswordHash = passwordHasher.HashPassword(user, "1234Qwe!");
+            userAdmin.PasswordHash = passwordHasher.HashPassword(userAdmin, "1234Qwe!");
+            viewer.PasswordHash = passwordHasher.HashPassword(viewer, "1234Abc!");
 
             modelBuilder.Entity<IdentityUser>()
-                .HasData(user);
+                .HasData(userAdmin);
+            modelBuilder.Entity<IdentityUser>()
+                .HasData(viewer);
 
-            //tworzenie admina
+            //tworzenie roli
             var adminRole = new IdentityRole()
             {
                 Id = Guid.NewGuid().ToString(),
@@ -56,18 +69,37 @@ namespace Data
                 NormalizedName = "ADMIN"
             };
 
+            var viewerRole = new IdentityRole()
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = "User",
+                NormalizedName = "USER"
+            };
+
             adminRole.ConcurrencyStamp = adminRole.Id;
+            viewerRole.ConcurrencyStamp = viewerRole.Id;
             
             modelBuilder.Entity<IdentityRole>()
                 .HasData(adminRole);
+            modelBuilder.Entity<IdentityRole>()
+                .HasData(viewerRole);
 
-            //skojarzenie uzytkownika z rola admina
+            //skojarzenie uzytkownika z rola
             modelBuilder.Entity<IdentityUserRole<string>>()
                 .HasData(
                 new IdentityUserRole<string>()
                 {
                     RoleId = adminRole.Id,
-                    UserId = user.Id
+                    UserId = userAdmin.Id
+                }
+            );
+
+            modelBuilder.Entity<IdentityUserRole<string>>()
+                .HasData(
+                new IdentityUserRole<string>()
+                {
+                    RoleId = viewerRole.Id,
+                    UserId = viewer.Id
                 }
             );
 

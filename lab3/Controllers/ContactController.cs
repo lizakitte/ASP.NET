@@ -33,6 +33,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             Contact model = new Contact();
@@ -67,6 +68,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(Contact model) 
         { 
             if (ModelState.IsValid)
@@ -79,12 +81,14 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id)
         {
             return View(_contactService.FindById(id));
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(Contact model)
         {
             if (ModelState.IsValid)
@@ -96,12 +100,14 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             return View(_contactService.FindById(id));
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Contact model)
         {
             _contactService.DeleteById(model.Id);
@@ -129,12 +135,14 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateApi()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateApi(Contact model)
         {
             if (ModelState.IsValid)

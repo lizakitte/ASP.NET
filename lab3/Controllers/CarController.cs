@@ -2,6 +2,7 @@
 using lab3_App.Models.CarModels;
 using lab3_App.Models.ContactModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace lab3_App.Controllers
 {
@@ -77,6 +78,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             Car _model = new Car();
@@ -86,6 +88,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(Car _model)
         {
             if (ModelState.IsValid)
@@ -99,12 +102,14 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id)
         {
             return View(_carService.FindById(id));
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(Car _model)
         {
             if (ModelState.IsValid)
@@ -120,6 +125,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var _model = _carService.FindById(id);
@@ -131,6 +137,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Car _model)
         {
             if (_carService.FindById(_model.Id) == null)
@@ -142,6 +149,7 @@ namespace lab3_App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Details(int id)
         {
             var _model = _carService.FindById(id);
@@ -155,18 +163,21 @@ namespace lab3_App.Controllers
             }
         }
         [HttpPost]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Details()
         {
             return RedirectToAction("Index");
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateApi()
         {
             return View(new Car());
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateApi(Car _model)
         {
             if (ModelState.IsValid)

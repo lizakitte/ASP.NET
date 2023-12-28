@@ -113,7 +113,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 1,
-                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5862),
+                            Birth = new DateTime(2023, 12, 28, 21, 0, 0, 117, DateTimeKind.Local).AddTicks(5481),
                             Email = "adam@wsei.edu.pl",
                             Name = "Adam",
                             OrganizationId = 101,
@@ -122,7 +122,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 2,
-                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5934),
+                            Birth = new DateTime(2023, 12, 28, 21, 0, 0, 117, DateTimeKind.Local).AddTicks(5545),
                             Email = "ewa@wsei.edu.pl",
                             Name = "Ewa",
                             OrganizationId = 102,
@@ -131,7 +131,7 @@ namespace Data.Migrations
                         new
                         {
                             ContactId = 3,
-                            Birth = new DateTime(2023, 12, 25, 15, 29, 32, 428, DateTimeKind.Local).AddTicks(5941),
+                            Birth = new DateTime(2023, 12, 28, 21, 0, 0, 117, DateTimeKind.Local).AddTicks(5551),
                             Email = "karol@wsei.edu.pl",
                             Name = "Karol",
                             Phone = "123456788"
@@ -227,10 +227,17 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f24af637-5246-4a71-a73d-166a115922bc",
-                            ConcurrencyStamp = "f24af637-5246-4a71-a73d-166a115922bc",
+                            Id = "ebb32830-fe02-4dc7-8fc9-45e84886aa41",
+                            ConcurrencyStamp = "ebb32830-fe02-4dc7-8fc9-45e84886aa41",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "cd3fe4d1-f5ea-4db4-b06c-b82ac85ad5b9",
+                            ConcurrencyStamp = "cd3fe4d1-f5ea-4db4-b06c-b82ac85ad5b9",
+                            Name = "User",
+                            NormalizedName = "USER"
                         });
                 });
 
@@ -323,19 +330,35 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4a0d31e7-76ca-4541-95d6-7f87047dfc0c",
+                            Id = "baa447d2-63d2-46e3-8495-2940fb54a2b4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "453bea70-06ba-46b7-b436-93d93575bd38",
+                            ConcurrencyStamp = "75831d10-fd60-48f8-9d90-7e299986f85c",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECzJeQxu3BgHhLkgaS5Anl/2l7jQ+LXX5u0DlKQiTFr0rvU1PV3kt0AHcTEv0dlKbg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPbKhBOqKW1p2WL8tyXT4TGENXuVRyhK+zVopsavYXg3LNQJwPJtN3GxLPemAN7+zg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9ca5382c-faf0-4c78-8f42-798c00574a5e",
+                            SecurityStamp = "d5ac1a0d-1d05-4d3d-807f-a813920a3a17",
                             TwoFactorEnabled = false,
                             UserName = "adam"
+                        },
+                        new
+                        {
+                            Id = "03b9d487-5008-4933-a504-5df09696f095",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "ea283fe4-b91f-4f35-978e-239bc445e9c4",
+                            Email = "user@wsei.edu.pl",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "USER@WSEI.EDU.PL",
+                            NormalizedUserName = "USER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJd765Q+Ah24TJLjSIsy6lU7aGl2qQiG1aI95ago7Jg3vWahwLyOyaEZx4Fb3UXXwQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "106e6ebd-690c-4093-b4a4-dabdabec1e87",
+                            TwoFactorEnabled = false,
+                            UserName = "user"
                         });
                 });
 
@@ -401,8 +424,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "4a0d31e7-76ca-4541-95d6-7f87047dfc0c",
-                            RoleId = "f24af637-5246-4a71-a73d-166a115922bc"
+                            UserId = "baa447d2-63d2-46e3-8495-2940fb54a2b4",
+                            RoleId = "ebb32830-fe02-4dc7-8fc9-45e84886aa41"
+                        },
+                        new
+                        {
+                            UserId = "03b9d487-5008-4933-a504-5df09696f095",
+                            RoleId = "cd3fe4d1-f5ea-4db4-b06c-b82ac85ad5b9"
                         });
                 });
 
