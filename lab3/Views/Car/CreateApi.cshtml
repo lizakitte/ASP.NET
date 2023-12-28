@@ -55,22 +55,22 @@
 @section Scripts
     {
     <script>
-        const select = document.getElementById('ManufacturerId');
-        const filter = document.getElementById('mfilter');
+        const selectm = document.getElementById('ManufacturerId');
+        const filterm = document.getElementById('mfilter');
 
-        filter.onchange = function () 
+        filterm.onchange = function () 
         {
-            fetch(`/api/manufacturers?q=${filter.value}`)
+            fetch(`/api/manufacturers?q=${filterm.value}`)
                 .then(response => response.json())
                 .then(json => 
                     {
-                    select.innerHTML = "";
+                    selectm.innerHTML = "";
                     for (let item of json) 
                     {
                         const option = document.createElement('option');
                         option.setAttribute('value', item.id);
                         option.innerText = item.name;
-                        select.appendChild(option);
+                        selectm.appendChild(option);
                     }
                 });
         }

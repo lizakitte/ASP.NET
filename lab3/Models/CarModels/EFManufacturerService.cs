@@ -25,6 +25,7 @@ namespace lab3_App.Models.CarModels
             if (find != null)
             {
                 _context.Manufacturers.Remove(find);
+                _context.SaveChanges();
             }
         }
 
@@ -35,12 +36,16 @@ namespace lab3_App.Models.CarModels
 
         public Manufacturer? FindById(int id)
         {
-            return ManufacturerMapper.FromEntity(_context.Manufacturers.Find(id));
+            var find = _context.Manufacturers.Find(id);
+            return find is null ? null : ManufacturerMapper.FromEntity(find);
         }
 
         public void Update(Manufacturer manufacturer)
         {
-            _context.Manufacturers.Update(ManufacturerMapper.ToEntity(manufacturer));
+            var entity = ManufacturerMapper.ToEntity(manufacturer);
+            _context.ChangeTracker.Clear();
+            _context.Update(entity);
+            _context.SaveChanges();
         }
     }
 }

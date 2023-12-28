@@ -8,18 +8,54 @@
 }
 @*Car - model, producent, pojemność silnika, moc, rodzaj silnika, nr rejestracyjny, właściciel*@
 <h1>Szczegoly</h1>
-<p>@Html.DisplayNameFor(i => Model.Model)</p>
-<h3>@Model.Model</h3>
-<p>@Html.DisplayNameFor(i => Model.ManufacturerId)</p>
-<h3>@Model.ManufacturerId</h3>
-<p>@Html.DisplayNameFor(i => Model.Capacity)</p>
-<h3>@Model.Capacity</h3>
-<p>@Html.DisplayNameFor(i => Model.Power)</p>
-<h3>@Model.Power</h3>
-<p>@Html.DisplayNameFor(i => Model.EngineType)</p>
-<h3>@Model.EngineType.GetDisplayName()</h3>
-<p>@Html.DisplayNameFor(i => Model.RegistratioinNumber)</p>
-<h3>@Model.RegistratioinNumber</h3>
-<p>@Html.DisplayNameFor(i => Model.ContactId)</p>
-<h3>@Model.ContactId</h3>
-<a class="btn btn-secondary" asp-action="Index">Powrot</a>
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.ManufacturerId)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ManufacturerId)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Power)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Power)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.EngineType)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.EngineType)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.RegistratioinNumber)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.RegistratioinNumber)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.ContactId)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ContactId)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Update">Edytuj</a> |
+    <a asp-action="Index">Powrót do listy</a>
+</div>
