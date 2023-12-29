@@ -36,7 +36,7 @@
                         @item.Model
                     </td>
                     <td>
-                        @item.ManufacturerId
+                        <a id="@item.ManufacturerId" manufacturer asp-controller="Manufacturer" asp-action="Details" asp-route-id="@item.ManufacturerId">@item.ManufacturerId</a>
                     </td>
                     <td>
                         @item.RegistratioinNumber
@@ -50,4 +50,22 @@
             }
         </tbody>
     </table>
+}
+
+
+@section Scripts
+{
+    <script>
+        const select = document.querySelectorAll('a[manufacturer]');
+
+        for (const s of select)
+        {
+            fetch(`api/manufacturers/${s.id}`)
+                .then(res => res.json())
+                .then(json => {
+                    console.log(json);
+                    s.innerText = json.name;
+                });
+        }
+    </script>
 }

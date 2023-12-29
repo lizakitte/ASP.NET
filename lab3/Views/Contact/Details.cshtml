@@ -7,14 +7,48 @@
 @{
 }
 <h1>Szczegoly</h1>
-<p>@Html.DisplayNameFor(i => Model.Name)</p>
-<h3>@Model.Name</h3>
-<p>@Html.DisplayNameFor(i => Model.Email)</p>
-<h3>@Model.Email</h3>
-<p>@Html.DisplayNameFor(i => Model.Phone)</p>
-<h3>@Model.Phone</h3>
-<p>@Html.DisplayNameFor(i => Model.Birth)</p>
-<h3>@Model.Birth</h3>
-<p>@Html.DisplayNameFor(i => Model.Created)</p>
-<h3>@Model.Created</h3>
-<a class="btn btn-secondary" asp-action="Index">Powrot</a>
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Birth)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Birth)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.OrganizationId)
+        </dt>
+        <dd class="col-sm-6">
+            <a id="@Model.OrganizationId" contact asp-controller="Organization" asp-action="Details" asp-route-id="@Model.OrganizationId">@Model.OrganizationId</a>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Update">Edytuj</a> |
+    <a asp-action="Index">Powrót do listy</a>
+</div>

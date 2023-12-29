@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.ManufacturerId)
         </dt>
         <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.ManufacturerId)
+            <a id="@Model.ManufacturerId" manufacturer asp-controller="Manufacturer" asp-action="Details" asp-route-id="@Model.ManufacturerId">@Model.ManufacturerId</a>
         </dd>
         <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Capacity)
@@ -50,7 +50,7 @@
             @Html.DisplayNameFor(model => model.ContactId)
         </dt>
         <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.ContactId)
+            <a id="@Model.ContactId" contact asp-controller="Contact" asp-action="Details" asp-route-id="@Model.ContactId">@Model.ContactId</a>
         </dd>
     </dl>
 </div>
@@ -59,3 +59,24 @@
     <a asp-action="Update">Edytuj</a> |
     <a asp-action="Index">Powrót do listy</a>
 </div>
+
+@section Scripts
+    {
+    <script>
+        const m = document.querySelector("a[manufacturer]");
+        fetch(`/api/manufacturers/${m.id}`)
+            .then(res => res.json())
+            .then(json => {
+                m.innerText = json.name;
+            });
+    </script>
+
+    <script>
+        const c = document.querySelector("a[contact]");
+        fetch(`/api/contacts/${c.id}`)
+            .then(res => res.json())
+            .then(json => {
+                c.innerText = json.name;
+            });
+    </script>
+}
