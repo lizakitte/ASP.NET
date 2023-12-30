@@ -1,5 +1,6 @@
 ﻿using Data;
 using Data.Entities;
+using Data.Migrations;
 using lab3_App.Models.ContactModels;
 
 namespace lab3_App.Models.CarModels
@@ -25,6 +26,7 @@ namespace lab3_App.Models.CarModels
             if (find != null)
             {
                 _context.Cars.Remove(find);
+                _context.SaveChanges();
             }
         }
 
@@ -45,7 +47,8 @@ namespace lab3_App.Models.CarModels
 
         public Car? FindById(int id)
         {
-            return CarMapper.FromEntity(_context.Cars.Find(id));
+            var find = _context.Cars.Find(id);
+            return find is null ? null : CarMapper.FromEntity(find);
         }
 
         public PagingList<Car> FindPage(int page, int size)
@@ -65,7 +68,10 @@ namespace lab3_App.Models.CarModels
 
         public void Update(Car car)
         {
-            _context.Cars.Update(CarMapper.ToEntity(car));
+            var entity = CarMapper.ToEntity(car);
+            _context.ChangeTracker.Clear();
+            _context.Update(entity);
+            _context.SaveChanges();
         }
     }
 }

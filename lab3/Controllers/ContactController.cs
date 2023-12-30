@@ -23,7 +23,7 @@ namespace lab3_App.Controllers
             return View(_contactService.FindAll());
         }
 
-        public IActionResult PagedIndex(int page = 1, int size = 5)
+        public IActionResult PagedIndex(int page = 1, int size = 3)
         {
             if (size < 1)
             {

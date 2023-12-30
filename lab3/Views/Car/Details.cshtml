@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.ManufacturerId)
         </dt>
         <dd class="col-sm-6">
-            <a id="@Model.ManufacturerId" manufacturer asp-controller="Manufacturer" asp-action="Details" asp-route-id="@Model.ManufacturerId">@Model.ManufacturerId</a>
+            <a class="link-dark" id="@Model.ManufacturerId" manufacturer asp-controller="Manufacturer" asp-action="Details" asp-route-id="@Model.ManufacturerId">@Model.ManufacturerId</a>
         </dd>
         <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Capacity)
@@ -50,14 +50,14 @@
             @Html.DisplayNameFor(model => model.ContactId)
         </dt>
         <dd class="col-sm-6">
-            <a id="@Model.ContactId" contact asp-controller="Contact" asp-action="Details" asp-route-id="@Model.ContactId">@Model.ContactId</a>
+            <a class="link-dark" id="@Model.ContactId" contact asp-controller="Contact" asp-action="Details" asp-route-id="@Model.ContactId">@Model.ContactId</a>
         </dd>
     </dl>
 </div>
 
 <div>
-    <a asp-action="Update">Edytuj</a> |
-    <a asp-action="Index">Powrót do listy</a>
+    <a class="btn btn-dark" asp-action="Update">Edytuj</a>
+    <a class="btn btn-dark" asp-action="Index">Powrót do listy</a>
 </div>
 
 @section Scripts

@@ -16,7 +16,7 @@
     <div class="mb-3">
         <label asp-for="ManufacturerId"></label>
         <select class="form-control" asp-for="ManufacturerId" asp-items="@Model.Manufacturers"></select>
-        <button class="btn btn-secondary mt-2" asp-controller="Manufacturer" asp-action="Create">Dodaj producenta</button>
+        <button class="btn btn-outline-dark mt-2" asp-controller="Manufacturer" asp-action="Create">Dodaj producenta</button>
     </div>
     <div class="mb-3">
         <label asp-for="Capacity"></label>
@@ -41,9 +41,9 @@
     <div class="mb-3">
         <label asp-for="ContactId"></label>
         <select class="form-control" asp-for="ContactId" asp-items="@Model.Contacts"></select>
-        <button class="btn btn-secondary mt-2" asp-controller="Contact" asp-action="Create">Dodaj kontakt</button>
+        <button class="btn btn-outline-dark mt-2" asp-controller="Contact" asp-action="Create">Dodaj kontakt</button>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Utworz</button>
+        <button class="btn btn-dark" type="submit">Utworz</button>
     </div>
 </form>

@@ -19,7 +19,7 @@
             @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.Email)
+            @Model.Email
         </dd>
         <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Phone)
@@ -43,12 +43,12 @@
             @Html.DisplayNameFor(model => model.OrganizationId)
         </dt>
         <dd class="col-sm-6">
-            <a id="@Model.OrganizationId" contact asp-controller="Organization" asp-action="Details" asp-route-id="@Model.OrganizationId">@Model.OrganizationId</a>
+            <a class="link-dark" id="@Model.OrganizationId" contact asp-controller="Organization" asp-action="Details" asp-route-id="@Model.OrganizationId">@Model.OrganizationId</a>
         </dd>
     </dl>
 </div>
 
 <div>
-    <a asp-action="Update">Edytuj</a> |
-    <a asp-action="Index">Powrót do listy</a>
+    <a class="btn btn-dark" asp-action="Update">Edytuj</a>
+    <a class="btn btn-dark" asp-action="Index">Powrót do listy</a>
 </div>

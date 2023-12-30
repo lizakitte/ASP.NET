@@ -30,50 +30,27 @@
                     </label>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-dark">Log in</button>
                 </div>
             </form>
         </section>
     </div>
     <div class="col-md-6 col-md-offset-2">
+        <h3>Other options</h3>
+        <hr/>
         <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
+        <p>
+            <p>Forgot your password?</p>
+            <a class="btn btn-outline-dark" id="forgot-password" asp-page="./ForgotPassword">Reset password</a>
+        </p>
+        <p>
+            <p>New to the service?</p>
+            <a class="btn btn-outline-dark" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
+        </p>
+        <p>
+            <p>Need to confirm email?</p>
+            <a class="btn btn-outline-dark" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Email confirmation</a>
+        </p>
         </section>
     </div>
 </div>

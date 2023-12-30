@@ -7,9 +7,9 @@
 @{
 }
 <h1>Lista samochodow</h1>
-<a class="btn btn-primary" asp-controller="Car" asp-action="Create">Utworz samochod</a>
-<a class="btn btn-primary" asp-controller="Car" asp-action="CreateApi">Utworz samochod API</a>
-<a class="btn btn-primary" asp-controller="Car" asp-action="Index">Zwykla witryna</a>
+<a class="btn btn-dark" asp-controller="Car" asp-action="Create">Utworz samochod</a>
+<a class="btn btn-dark" asp-controller="Car" asp-action="CreateApi">Utworz samochod API</a>
+<a class="btn btn-dark" asp-controller="Car" asp-action="Index">Zwykla witryna</a>
 @if (Model.Data.Count() > 0)
 {
     <table class="table">
@@ -43,9 +43,9 @@
                         @item.RegistratioinNumber
                     </td>
                     <td>
-                        <a class="btn btn-outline-primary" asp-controller="Car" asp-action="Update" asp-route-id="@item.Id">Edytuj</a>
-                        <a class="btn btn-outline-info" asp-controller="Car" asp-action="Details" asp-route-id="@item.Id">Szczegoly</a>
-                        <a class="btn btn-outline-danger" asp-controller="Car" asp-action="Delete" asp-route-id="@item.Id">Usun</a>
+                        <a class="btn btn-outline-secondary" asp-controller="Car" asp-action="Update" asp-route-id="@item.Id">Edytuj</a>
+                        <a class="btn btn-outline-secondary" asp-controller="Car" asp-action="Details" asp-route-id="@item.Id">Szczegoly</a>
+                        <a class="btn btn-outline-secondary" asp-controller="Car" asp-action="Delete" asp-route-id="@item.Id">Usun</a>
                     </td>
                 </tr>
             }
@@ -57,7 +57,7 @@
             @if (Model.IsPrevious)
             {
                 <li class="page-item">
-                    <a class="page-link"
+                    <a class="page-link link-dark"
                        asp-controller="Car"
                        asp-action="PagedIndex"
                        asp-route-page="@(Model.Page - 1)"
@@ -69,16 +69,16 @@
             else
             {
                 <li class="page-item disabled">
-                    <a class="page-link">Poprzednia</a>
+                    <a class="page-link link-dark">Poprzednia</a>
                 </li>
             }
             <li class="page-item disabled">
-                <a class="page-link">@Model.Page</a>
+                <a class="page-link link-dark">@Model.Page</a>
             </li>
             @if (Model.IsNext)
             {
                 <li class="page-item">
-                    <a class="page-link"
+                    <a class="page-link link-dark"
                        asp-controller="Car"
                        asp-action="PagedIndex"
                        asp-route-page="@(Model.Page + 1)"
