@@ -10,37 +10,37 @@
 <form asp-controller="Car" asp-action="Create" method="post">
     <div class="mb-3">
         <label asp-for="Model"></label>
-        <input class="form-control" asp-for="Model" />
+        <input class="form-control shadow-none" asp-for="Model" />
         <span class="text-danger" asp-validation-for="Model"></span>
     </div>
     <div class="mb-3">
         <label asp-for="ManufacturerId"></label>
-        <select class="form-control" asp-for="ManufacturerId" asp-items="@Model.Manufacturers"></select>
+        <select class="form-control shadow-none" asp-for="ManufacturerId" asp-items="@Model.Manufacturers"></select>
         <button class="btn btn-outline-dark mt-2" asp-controller="Manufacturer" asp-action="Create">Dodaj producenta</button>
     </div>
     <div class="mb-3">
         <label asp-for="Capacity"></label>
-        <input class="form-control" asp-for="Capacity" />
+        <input class="form-control shadow-none" asp-for="Capacity" />
         <span class="text-danger" asp-validation-for="Capacity"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Power"></label>
-        <input class="form-control" asp-for="Power" />
+        <input class="form-control shadow-none" asp-for="Power" />
         <span asp-validation-for="Power"></span>
     </div>
     <div class="mb-3">
         <label asp-for="EngineType">Typ silnika</label>
-        <select class="form-control" asp-for="EngineType" asp-items="@Html.GetEnumSelectList<Engine>()"> </select>
+        <select class="form-control shadow-none" asp-for="EngineType" asp-items="@Html.GetEnumSelectList<Engine>()"> </select>
         <span asp-validation-for="EngineType"></span>
     </div>
     <div class="mb-3">
         <label asp-for="RegistratioinNumber"></label>
-        <input class="form-control" asp-for="RegistratioinNumber" />
+        <input class="form-control shadow-none" asp-for="RegistratioinNumber" />
         <span asp-validation-for="RegistratioinNumber"></span>
     </div>
     <div class="mb-3">
         <label asp-for="ContactId"></label>
-        <select class="form-control" asp-for="ContactId" asp-items="@Model.Contacts"></select>
+        <select class="form-control shadow-none" asp-for="ContactId" asp-items="@Model.Contacts"></select>
         <button class="btn btn-outline-dark mt-2" asp-controller="Contact" asp-action="Create">Dodaj kontakt</button>
     </div>
     <div class="mb-3">

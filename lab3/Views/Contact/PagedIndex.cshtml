@@ -57,8 +57,8 @@
     <ul class="pagination">
         @if (Model.IsPrevious)
         {
-            <li class="page-item">
-                <a class="page-link link-dark"
+            <li class="page-item shadow-none">
+                <a class="page-link link-dark shadow-none"
                    asp-controller="Contact"
                    asp-action="PagedIndex"
                    asp-route-page="@(Model.Page - 1)"
@@ -78,8 +78,8 @@
         </li>
         @if (Model.IsNext)
         {
-            <li class="page-item">
-                <a class="page-link link-dark"
+            <li class="page-item shadow-none">
+                <a class="page-link link-dark shadow-none"
                    asp-controller="Contact"
                    asp-action="PagedIndex"
                    asp-route-page="@(Model.Page + 1)"
