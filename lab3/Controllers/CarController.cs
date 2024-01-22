@@ -15,9 +15,16 @@ namespace lab3_App.Controllers
             _carService = carService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string? search = null)
         {
-            return View(_carService.FindAll());
+            var cars = _carService.FindAll();
+            if (search is null)
+            {
+                return View(cars);
+            }
+            var filteredCars = cars.Where(r => r.Model.Contains(search, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+            return View(filteredCars);
         }
 
         public IActionResult PagedIndex([FromQuery] int page = 1, [FromQuery] int size = 1)

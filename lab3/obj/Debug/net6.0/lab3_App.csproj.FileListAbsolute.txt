@@ -305,3 +305,5 @@ C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\vi\Humani
 C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\zh-CN\Humanizer.resources.dll
 C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\zh-Hans\Humanizer.resources.dll
 C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Liza\Desktop\wsei\Programowanie\ASP.NET\lab3\bin\Debug\net6.0\StarkbankEcdsa.dll
